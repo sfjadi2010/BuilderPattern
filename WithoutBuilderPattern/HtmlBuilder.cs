@@ -16,7 +16,7 @@ public class HtmlBuilder
     {
         ArgumentNullException.ThrowIfNull(childName, "childName");
         ArgumentNullException.ThrowIfNull(childText, "childText");
-        root.Elements.Add(new HtmlElement(childText, childName));
+        root.Elements.Add(new HtmlElement(childName, childText));
     }
 
     public override string ToString()

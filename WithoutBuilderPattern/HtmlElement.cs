@@ -9,7 +9,7 @@ public class HtmlElement
     private const int indentSize = 2;
 
     public HtmlElement() { }
-    public HtmlElement(string text, string name)
+    public HtmlElement(string name, string text)
     {
         ArgumentNullException.ThrowIfNull(text, "text");
         ArgumentNullException.ThrowIfNull(name, "name");
@@ -35,7 +35,7 @@ public class HtmlElement
             sb.Append(e.ToStringImpl(indent + 1));
         }
 
-        sb.AppendLine($"</{Name}>");
+        sb.AppendLine($"{i}</{Name}>");
 
         return sb.ToString();
     }
