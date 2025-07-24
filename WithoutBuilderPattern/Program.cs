@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Text;
+using WithoutBuilderPattern;
 
 string hello = "Hello";
 
@@ -19,3 +20,8 @@ foreach (string word in words)
 }
 sb.Append("</ul");
 Console.WriteLine(sb);
+
+HtmlBuilder builder = new HtmlBuilder("ul");
+builder.AddChild("li", "Hello");
+builder.AddChild("li", "World");
+Console.WriteLine(builder);
