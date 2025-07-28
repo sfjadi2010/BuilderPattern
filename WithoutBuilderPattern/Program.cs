@@ -22,6 +22,5 @@ sb.Append("</ul");
 Console.WriteLine(sb);
 
 HtmlBuilder builder = new HtmlBuilder("ul");
-builder.AddChild("li", "Hello");
-builder.AddChild("li", "World");
+builder.AddChild("li", "Hello").AddChild("li", "World");
 Console.WriteLine(builder);

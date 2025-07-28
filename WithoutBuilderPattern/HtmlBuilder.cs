@@ -12,11 +12,12 @@ public class HtmlBuilder
         root.Name = rootName;
     }
 
-    public void AddChild(string childName, string childText)
+    public HtmlBuilder AddChild(string childName, string childText)
     {
         ArgumentNullException.ThrowIfNull(childName, "childName");
         ArgumentNullException.ThrowIfNull(childText, "childText");
         root.Elements.Add(new HtmlElement(childName, childText));
+        return this;
     }
 
     public override string ToString()
